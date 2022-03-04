@@ -12,19 +12,19 @@ public class CadMedicoDto {
     @NotBlank
     private String medNome;
     @NotBlank
-    private String medCrm;
+    private Long medCrm;
     @NotBlank
     @Size(min = 10, max = 15)
-    private String medTelefone;
+    private Long medTelefone;
     @NotBlank
     @Size(min = 11, max = 15)
-    private String medCelular;
+    private Long medCelular;
     @NotNull
     private int espIdPrimaria;
     @NotNull
     private int espIdSecundaria;
     @NotBlank
-    private String medCep;
+    private Long medCep;
 
     public String getMedHabilitado() {
         return medHabilitado;
@@ -42,27 +42,27 @@ public class CadMedicoDto {
         this.medNome = medNome;
     }
 
-    public String getMedCrm() {
+    public Long getMedCrm() {
         return medCrm;
     }
 
-    public void setMedCrm(String medCrm) {
+    public void setMedCrm(Long medCrm) {
         this.medCrm = medCrm;
     }
 
-    public String getMedTelefone() {
+    public Long getMedTelefone() {
         return medTelefone;
     }
 
-    public void setMedTelefone(String medTelefone) {
+    public void setMedTelefone(Long medTelefone) {
         this.medTelefone = medTelefone;
     }
 
-    public String getMedCelular() {
+    public Long getMedCelular() {
         return medCelular;
     }
 
-    public void setMedCelular(String medCelular) {
+    public void setMedCelular(Long medCelular) {
         this.medCelular = medCelular;
     }
 
@@ -82,11 +82,11 @@ public class CadMedicoDto {
         this.espIdSecundaria = espIdSecundaria;
     }
 
-    public String getMedCep() {
+    public Long getMedCep() {
         return medCep;
     }
 
-    public void setMedCep(String medCep) {
+    public void setMedCep(Long medCep) {
         this.medCep = medCep;
     }
 

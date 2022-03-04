@@ -58,13 +58,29 @@ public class CadMedicoController {
         return ResponseEntity.status(HttpStatus.OK).body(cadMedicoService.findAll());
     }
 
-    @GetMapping("/s/{id}")
+    @GetMapping("/s/i/{id}")
     public ResponseEntity<Object> getUnicoMedico(@PathVariable(value = "id") long id) {
         Optional<CadMedicoModel> cadMedicoModelOptional = cadMedicoService.findById(id);
         if (!cadMedicoModelOptional.isPresent()) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Médico não localizado pelo id informado.");
         }
         return ResponseEntity.status(HttpStatus.OK).body(cadMedicoModelOptional.get());
+    }
+
+    @GetMapping("/s/n/{nome}")
+    public ResponseEntity<Object> getUnicoMedico(@PathVariable(value = "nome") String medNome) {
+
+        var cadMedicoModel = new CadMedicoModel();
+        cadMedicoModel.getMedNome().contains(medNome);
+
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Teste");
+
+        // if (!cadMedicoModelOptional.isPresent()) {
+        // return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Médico não
+        // localizado pelo id informado.");
+        // }
+        // return
+        // ResponseEntity.status(HttpStatus.OK).body(cadMedicoModelOptional.get());
     }
 
     @PutMapping("/u/{id}")

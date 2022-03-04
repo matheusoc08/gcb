@@ -25,20 +25,20 @@ public class CadMedicoModel implements Serializable {
     private LocalDateTime medDataCadastro;
     @Column(nullable = true)
     private LocalDateTime medDataAtualizacao;
-    @Column(nullable = false, length = 30)
+    @Column(nullable = false, length = 120)
     private String medNome;
-    @Column(nullable = false, unique = true, length = 10)
-    private String medCrm;
+    @Column(nullable = false, unique = true, length = 7)
+    private Long medCrm;
     @Column(nullable = false, length = 15)
-    private String medTelefone;
+    private Long medTelefone;
     @Column(nullable = false, length = 15)
-    private String medCelular;
+    private Long medCelular;
     @Column(nullable = false)
     private int espIdPrimaria;
     @Column(nullable = false)
     private int espIdSecundaria;
     @Column(nullable = false, length = 8)
-    private String medCep;
+    private Long medCep;
 
     public static long getSerialversionuid() {
         return serialVersionUID;
@@ -84,27 +84,27 @@ public class CadMedicoModel implements Serializable {
         this.medNome = medNome;
     }
 
-    public String getMedCrm() {
+    public Long getMedCrm() {
         return medCrm;
     }
 
-    public void setMedCrm(String medCrm) {
+    public void setMedCrm(Long medCrm) {
         this.medCrm = medCrm;
     }
 
-    public String getMedTelefone() {
+    public Long getMedTelefone() {
         return medTelefone;
     }
 
-    public void setMedTelefone(String medTelefone) {
+    public void setMedTelefone(Long medTelefone) {
         this.medTelefone = medTelefone;
     }
 
-    public String getMedCelular() {
+    public Long getMedCelular() {
         return medCelular;
     }
 
-    public void setMedCelular(String medCelular) {
+    public void setMedCelular(Long medCelular) {
         this.medCelular = medCelular;
     }
 
@@ -124,11 +124,11 @@ public class CadMedicoModel implements Serializable {
         this.espIdSecundaria = espIdSecundaria;
     }
 
-    public String getMedCep() {
+    public Long getMedCep() {
         return medCep;
     }
 
-    public void setMedCep(String medCep) {
+    public void setMedCep(Long medCep) {
         this.medCep = medCep;
     }
 

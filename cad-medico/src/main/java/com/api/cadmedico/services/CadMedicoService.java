@@ -27,7 +27,7 @@ public class CadMedicoService {
         return cadMedicoRepository.findAll();
     }
 
-    public boolean existsByMedCrm(String medCrm) {
+    public boolean existsByMedCrm(Long medCrm) {
         return cadMedicoRepository.existsByMedCrm(medCrm);
     }
 

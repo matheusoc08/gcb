@@ -8,6 +8,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface CadMedicoRepository extends JpaRepository<CadMedicoModel, Long> {
 
-    boolean existsByMedCrm(String medCrm);
+    boolean existsByMedCrm(Long medCrm);
 
 }
